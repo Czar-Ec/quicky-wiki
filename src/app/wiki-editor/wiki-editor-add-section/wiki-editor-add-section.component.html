@@ -1,0 +1,24 @@
+<div class="wiki-editor-add-button">
+  <button mat-raised-button (click)="addNormalSection()" class="add-section-button">
+    Add Section
+    <mat-icon fontIcon="add"></mat-icon>
+    <button mat-button [matMenuTriggerFor]="menu" class="extra-menu-button" (click)="$event.stopPropagation()" disableRipple>
+      <mat-icon iconPositionEnd fontIcon="arrow_drop_down"></mat-icon>
+    </button>
+  </button>
+</div>
+
+<mat-menu #menu="matMenu">
+  <button mat-menu-item>
+    <mat-icon>crop_7_5</mat-icon>
+    <span>1 Column</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon style="transform: rotate(90deg)">view_agenda</mat-icon>
+    <span>2 Columns</span>
+  </button>
+  <button mat-menu-item>
+    <mat-icon>view_column</mat-icon>
+    <span>3 Columns</span>
+  </button>
+</mat-menu>
